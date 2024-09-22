@@ -1,4 +1,5 @@
 import Link from "next/link";
+import {SignInButton,SignIn,SignOutButton,SignUp,UserButton, SignedIn,SignedOut,SignUpButton} from "@clerk/nextjs"
 
 export default function Header() {
   return (
@@ -18,7 +19,16 @@ export default function Header() {
           <ul className="flex gap-4"> 
             <Link href="/">Home</Link>
             <Link href="/about">About</Link>
-            <Link href="/sign-in">Sign in</Link>
+            {/* <Link href="/sign-in">Sign in</Link> */}
+            <SignedIn >
+              <UserButton />
+              <SignOutButton />
+            </SignedIn>
+            <SignedOut>
+              <SignInButton />
+              <SignUpButton />
+            </SignedOut>
+            
           </ul>
         </nav>
       </div>
