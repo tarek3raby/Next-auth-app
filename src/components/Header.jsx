@@ -22,11 +22,11 @@ export default function Header() {
             {/* <Link href="/sign-in">Sign in</Link> */}
             <SignedIn >
               <UserButton />
-              <SignOutButton />
+              {/* <SignOutButton /> */}
             </SignedIn>
             <SignedOut>
               <SignInButton />
-              <SignUpButton />
+              {/* <SignUpButton /> */}
             </SignedOut>
             
           </ul>
